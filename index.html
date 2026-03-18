@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Đấu Trường VIP</title>
+<style>
+:root {
+  --red-btn: linear-gradient(180deg, #d32f2f, #b71c1c);
+  --blue-btn: linear-gradient(180deg, #1c2833, #0b131b);
+  --dark-btn: linear-gradient(180deg, #2c3e50, #17202a);
+  --green-btn: linear-gradient(180deg, #117a65, #0b5345);
+  --gold-btn: linear-gradient(180deg, #d4ac0d, #9a7d0a);
+}
+body { margin:0; font-family: Arial, sans-serif; background:#0b0d10; color:white; display:flex; justify-content:center; padding:20px 0; }
+.container { max-width:450px; width:92%; text-align:center; }
+.banner { width:100%; border-radius:10px; margin-bottom:12px; box-shadow:0 4px 10px rgba(0,0,0,0.5); border:1px solid rgba(255,255,255,0.1); }
+.btn { position:relative; display:flex; align-items:center; justify-content:center; margin:12px auto; padding:18px; font-size:17px; font-weight:800; border-radius:10px; text-decoration:none; color:white; text-transform:uppercase; overflow:hidden; transition:0.2s; box-shadow:0 4px 12px rgba(0,0,0,0.4); border:1px solid rgba(255,255,255,0.1);}
+.btn::after { content:""; position:absolute; top:0; left:-100%; width:50%; height:100%; background:linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,0.3) 50%, rgba(255,255,255,0) 100%); transform:skewX(-25deg); transition:0.6s;}
+.btn:hover::after { left:125%; }
+.btn:active { transform: scale(0.95); }
+.btn-live { background: var(--red-btn); animation: pulse 1.5s infinite; }
+.btn-reg { background: var(--blue-btn); }
+.btn-comment { background: var(--green-btn); }
+.btn-code { background: var(--gold-btn); color:#000; }
+.btn-support { background: var(--dark-btn); }
+@keyframes pulse {0%{transform:scale(1);}50%{transform:scale(1.03);}100%{transform:scale(1);}}
+.icon { margin-right:12px; font-size:20px; }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <!-- Banner Trận đấu -->
+  <img src="https://github.com/lexusphan7-jpg/tho-mo-live/blob/main/photo_2026-03-18_00-06-55.jpg?raw=true" class="banner">
+
+  <!-- Xem trực tiếp -->
+  <a class="btn btn-live" href="https://www.thomohomnayqeqee.com">
+    <span class="icon">▶️</span> XEM TRỰC TIẾP
+  </a>
+
+  <!-- Nạp rút -->
+  <a class="btn btn-reg" href="https://www.789vl.vip">
+    <span class="icon">💳</span> ĐĂNG KÝ - NẠP RÚT
+  </a>
+
+  <!-- Chăm sóc khách hàng -->
+  <a class="btn btn-support" href="tg://resolve?domain=chamsochuongdan">
+    <span class="icon">🎧</span> CHĂM SÓC KHÁCH HÀNG
+  </a>
+
+  <!-- Banner Minigame -->
+  <img src="https://github.com/lexusphan7-jpg/tho-mo-live/blob/main/photo_2026-03-18_00-21-30.jpg?raw=true" class="banner" style="margin-top:10px;">
+
+  <!-- Bình luận soi kèo -->
+  <a class="btn btn-comment" href="https://t.me/PhongChat1/22">
+    <span class="icon">💬</span> BÌNH LUẬN SOI KÈO
+  </a>
+
+  <!-- Nhập code thưởng -->
+  <a class="btn btn-code" href="https://t.me/PhongChat1/22">
+    <span class="icon">🎁</span> NHẬP CODE THƯỞNG
+  </a>
+
+  <p style="font-size:12px; color:#64748b;">Nếu không tự mở Telegram, vui lòng bấm ⋮ mở bằng trình duyệt</p>
+</div>
+</body>
+</html>
