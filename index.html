@@ -3,66 +3,137 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Đấu Trường VIP</title>
+<title>Đấu Trường Chiến Kê - Đam Mê & Trí Tuệ</title>
 <style>
 :root {
-  --red-btn: linear-gradient(180deg, #d32f2f, #b71c1c);
-  --blue-btn: linear-gradient(180deg, #1c2833, #0b131b);
-  --dark-btn: linear-gradient(180deg, #2c3e50, #17202a);
-  --green-btn: linear-gradient(180deg, #117a65, #0b5345);
-  --gold-btn: linear-gradient(180deg, #d4ac0d, #9a7d0a);
+  --btn-red: linear-gradient(180deg, #E31E24, #9B181B);
+  --btn-navy: linear-gradient(180deg, #232D4B, #1A1F33);
+  --btn-darkgray: linear-gradient(180deg, #2C2E35, #1E2024);
+  --btn-green: linear-gradient(180deg, #1E5052, #123233);
+  --btn-gold: linear-gradient(180deg, #F9BD2F, #E1A31E);
 }
-body { margin:0; font-family: Arial, sans-serif; background:#0b0d10; color:white; display:flex; justify-content:center; padding:20px 0; }
-.container { max-width:450px; width:92%; text-align:center; }
-.banner { width:100%; border-radius:10px; margin-bottom:12px; box-shadow:0 4px 10px rgba(0,0,0,0.5); border:1px solid rgba(255,255,255,0.1); }
-.btn { position:relative; display:flex; align-items:center; justify-content:center; margin:12px auto; padding:18px; font-size:17px; font-weight:800; border-radius:10px; text-decoration:none; color:white; text-transform:uppercase; overflow:hidden; transition:0.2s; box-shadow:0 4px 12px rgba(0,0,0,0.4); border:1px solid rgba(255,255,255,0.1);}
-.btn::after { content:""; position:absolute; top:0; left:-100%; width:50%; height:100%; background:linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,0.3) 50%, rgba(255,255,255,0) 100%); transform:skewX(-25deg); transition:0.6s;}
-.btn:hover::after { left:125%; }
-.btn:active { transform: scale(0.95); }
-.btn-live { background: var(--red-btn); animation: pulse 1.5s infinite; }
-.btn-reg { background: var(--blue-btn); }
-.btn-comment { background: var(--green-btn); }
-.btn-code { background: var(--gold-btn); color:#000; }
-.btn-support { background: var(--dark-btn); }
-@keyframes pulse {0%{transform:scale(1);}50%{transform:scale(1.03);}100%{transform:scale(1);}}
-.icon { margin-right:12px; font-size:20px; }
+
+body {
+  margin: 0;
+  font-family: 'Montserrat', Arial, sans-serif;
+  background: #0b0d10;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  padding: 20px 0;
+}
+
+.container {
+  max-width: 450px;
+  width: 92%;
+  text-align: center;
+}
+
+.banner {
+  width: 100%;
+  border-radius: 12px;
+  margin-bottom: 8px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+  border: 1px solid rgba(255,255,255,0.1);
+  display: block;
+}
+
+.section-title {
+  font-size: 14px;
+  color: #aaa;
+  text-transform: uppercase;
+  margin: 15px 0 5px;
+  letter-spacing: 1px;
+  font-weight: bold;
+}
+
+.btn {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px auto 20px;
+  padding: 15px;
+  font-size: 16px;
+  font-weight: 800;
+  border-radius: 14px;
+  text-decoration: none;
+  color: white;
+  text-transform: uppercase;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+.btn::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,0.3) 50%, rgba(255,255,255,0) 100%);
+  transform: skewX(-25deg);
+  transition: 0.5s;
+}
+
+.btn:hover::after { left: 125%; }
+.btn:active { transform: scale(0.96); }
+
+.btn-live { background: var(--btn-red); animation: pulse 1.5s infinite; color:#fff; }
+.btn-comment { background: var(--btn-navy); color:#fff; }
+.btn-reg { background: var(--btn-green); color:#fff; }
+.btn-code { background: var(--btn-gold); animation: pulse 2s infinite; color:#1A1A1A; }
+.btn-support { background: var(--btn-darkgray); color:#fff; }
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.03); }
+  100% { transform: scale(1); }
+}
+
+.icon { margin-right: 20px; font-size: 32px; }
+
 </style>
 </head>
 <body>
 <div class="container">
 
-  <!-- Banner Trận đấu -->
-  <img src="https://github.com/lexusphan7-jpg/tho-mo-live/blob/main/photo_2026-03-18_00-06-55.jpg?raw=true" class="banner">
+  <!-- Banner Tiêu đề -->
+  <img src="https://i.ibb.co/XYZ/banner-tieu-de-gach.png" class="banner">
 
-  <!-- Xem trực tiếp -->
-  <a class="btn btn-live" href="https://www.thomohomnayqeqee.com">
+  <!-- Section Live -->
+  <div class="section-title">Trực tiếp bồ gà hôm nay</div>
+  <a class="btn btn-live" href="https://nellinssen.nl">
     <span class="icon">▶️</span> XEM TRỰC TIẾP
   </a>
+  <img src="https://i.ibb.co/XYZ/lich-dau-vip.png" class="banner">
 
-  <!-- Nạp rút -->
-  <a class="btn btn-reg" href="https://www.789vl.vip">
-    <span class="icon">💳</span> ĐĂNG KÝ - NẠP RÚT
+  <!-- Section Soi cầu -->
+  <div class="section-title">Kỹ thuật & Soi cầu chuyên sâu</div>
+  <a class="btn btn-comment" href="https://t.me/PhongChat1/22">
+    <span class="icon">💬</span> NHÓM KÉO & SOI CẦU VIP
   </a>
+  <img src="https://i.ibb.co/XYZ/soi-cau-vay-ga.png" class="banner">
 
-  <!-- Chăm sóc khách hàng -->
-  <a class="btn btn-support" href="tg://resolve?domain=chamsochuongdan">
+  <!-- Section Minigame & Code -->
+  <div class="section-title">Đặc quyền hội viên Group</div>
+  <a class="btn btn-code" href="https://t.me/PhongChat1/22">
+    <span class="icon">🎁</span> NHẬN CODE GROUP MỖI NGÀY
+  </a>
+  <img src="https://i.ibb.co/XYZ/banner-minigame.png" class="banner">
+
+  <!-- Section Giao dịch & CSKH -->
+  <div class="section-title">Hệ thống giao dịch uy tín</div>
+  <a class="btn btn-reg" href="https://www.789vl.vip">
+    <span class="icon">💳</span> ĐĂNG KÝ / NẠP RÚT
+  </a>
+  <a class="btn btn-support" href="https://t.me/@chamsochuongdan">
     <span class="icon">🎧</span> CHĂM SÓC KHÁCH HÀNG
   </a>
+  <img src="https://i.ibb.co/XYZ/banner-uy-tin-cuoi.png" class="banner">
 
-  <!-- Banner Minigame -->
-  <img src="https://github.com/lexusphan7-jpg/tho-mo-live/blob/main/photo_2026-03-18_00-21-30.jpg?raw=true" class="banner" style="margin-top:10px;">
-
-  <!-- Bình luận soi kèo -->
-  <a class="btn btn-comment" href="https://t.me/PhongChat1/22">
-    <span class="icon">💬</span> BÌNH LUẬN SOI KÈO
-  </a>
-
-  <!-- Nhập code thưởng -->
-  <a class="btn btn-code" href="https://t.me/PhongChat1/22">
-    <span class="icon">🎁</span> NHẬP CODE THƯỞNG
-  </a>
-
-  <p style="font-size:12px; color:#64748b;">Nếu không tự mở Telegram, vui lòng bấm ⋮ mở bằng trình duyệt</p>
 </div>
 </body>
 </html>
