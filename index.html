@@ -4,92 +4,156 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Cẩm Nang Chiến Kê 789VL</title>
+
 <style>
-    body { margin: 0; background: #0b0d10; font-family: -apple-system, system-ui, sans-serif; color: #d1d5db; line-height: 1.6; }
-    .wrapper { max-width: 650px; margin: auto; padding: 15px; padding-bottom: 120px; background: #0f1116; box-shadow: 0 0 50px rgba(0,0,0,0.8); }
-    img { width: 100%; display: block; border-radius: 10px; margin: 20px 0 10px 0; border: 1px solid #333; }
-    .cover { border: 1.5px solid #E6C15A; box-shadow: 0 0 30px rgba(230,193,90,0.2); }
-    .box { background: #1a1d23; padding: 20px; border-radius: 10px; margin-bottom: 30px; border-left: 4px solid #E6C15A; }
-    .title { color: #E6C15A; font-weight: bold; font-size: 19px; margin-bottom: 10px; text-transform: uppercase; letter-spacing: 0.5px; }
-    .desc { font-size: 15px; color: #cbd5e1; }
-    ul { padding-left: 20px; margin: 10px 0; }
-    li { margin-bottom: 8px; }
-    .highlight { color: #facc15; font-weight: bold; }
-    .btn { display: block; text-align: center; padding: 16px; border-radius: 12px; text-decoration: none; font-weight: bold; color: white; margin: 20px 0; text-transform: uppercase; transition: 0.2s; }
-    .red { background: linear-gradient(180deg,#E53935,#9B181B); border-bottom: 4px solid #5a0d0f; }
-    .blue { background: linear-gradient(180deg,#2563EB,#1E3A8A); border-bottom: 4px solid #0f1d46; }
-    .gold { background: linear-gradient(180deg,#C9A227,#E6C15A); color:#000; border-bottom: 4px solid #8d6e13; }
-    .sticky { position: fixed; bottom: 0; left: 50%; transform: translateX(-50%); width: 100%; max-width: 650px; background: rgba(11,13,16,0.98); backdrop-filter: blur(10px); padding: 12px; border-top: 1px solid #333; box-sizing: border-box; z-index: 999; }
+body {
+    margin: 0;
+    background: #0b0d10;
+    font-family: -apple-system, sans-serif;
+    color: #e5e7eb;
+}
+
+.wrapper {
+    max-width: 900px; /* FIX PC đẹp */
+    margin: auto;
+    padding: 15px;
+}
+
+/* ẢNH */
+img {
+    width: 100%;
+    border-radius: 12px;
+    margin: 15px 0;
+}
+
+/* BÌA */
+.cover {
+    max-height: 500px;
+    object-fit: contain;
+    background: #000;
+}
+
+/* NỘI DUNG */
+.box {
+    background: #111;
+    padding: 18px;
+    border-radius: 12px;
+    margin-bottom: 25px;
+    border-left: 4px solid #E6C15A;
+    line-height: 1.7;
+}
+
+.title {
+    color: #E6C15A;
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+
+.btn {
+    display: block;
+    text-align: center;
+    padding: 14px;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 15px 0;
+}
+
+.red { background: linear-gradient(#E53935,#9B181B); color:#fff; }
+.blue { background: linear-gradient(#2563EB,#1E3A8A); color:#fff; }
+.gold { background: linear-gradient(#C9A227,#E6C15A); color:#000; }
+
+/* MOBILE */
+@media(max-width:600px){
+    .wrapper { max-width: 100%; }
+}
 </style>
 </head>
+
 <body>
+
 <div class="wrapper">
-    <img src="photo_2026-03-19_13-37-12.jpg" class="cover">
-    <div class="box">
-        <div class="title">📖 CẨM NANG CHIẾN KÊ BIÊN GIỚI</div>
-        <div class="desc">
-            <i>(Chia sẻ từ cộng đồng – Dành cho anh em đam mê gà CPC & Hà Tiên)</i><br><br>
-            Đá gà biên giới không chỉ là may rủi, đó là sự kết hợp giữa <span class="highlight">quan sát tinh tường</span> và <span class="highlight">kỷ luật thép</span>. Bản cẩm nang này giúp anh em nắm chắc phần thắng trong tay.
-        </div>
-    </div>
-    <a href="https://t.me/yourlink" class="btn red">▶ XEM ĐÁ GÀ TRỰC TIẾP</a>
 
-    <img src="photo_2026-03-19_13-37-05.jpg">
-    <div class="box">
-        <div class="title">I. TỔNG QUAN ĐẤU TRƯỜNG & GIỜ VÀNG</div>
-        <div class="desc">
-            <p><b>1. Hệ thống CPC (Thomo):</b> Hoạt động rầm rộ từ 12h00 - 18h00. Sân chơi gà nòi lai đòn nặng, kết thúc cực nhanh.</p>
-            <p><b>2. Hà Tiên:</b> Sôi động từ 12h00 trưa. "Thánh địa" gà Tre với tốc độ tên bắn và độ lỳ cực cao.</p>
-        </div>
-    </div>
+<img src="https://raw.githubusercontent.com/USERNAME/REPO/main/photo_2026-03-19_13-37-12.jpg" class="cover">
 
-    <img src="photo_2026-03-19_13-35-57.jpg">
-    <div class="box">
-        <div class="title">II. NHẬN DIỆN 6 DÒNG LÔNG</div>
-        <div class="desc">
-            <ul>
-                <li><span class="highlight">Gà ĐIỀU:</span> Sung mãn, dũng mãnh.</li>
-                <li><span class="highlight">Gà Ô:</span> Lỳ lợm, chịu đòn tốt.</li>
-                <li><span class="highlight">Gà XÁM:</span> Đá đầu óc, phản đòn hiểm.</li>
-                <li><span class="highlight">Gà NHẠN:</span> Tốc độ bay nạp đáng sợ.</li>
-                <li><span class="highlight">Gà KHÉT:</span> Cú đâm cựa cực "cay".</li>
-                <li><span class="highlight">Gà CHUỐI:</span> Lối đá lắt léo, khó đoán.</li>
-            </ul>
-        </div>
-    </div>
-    <a href="https://t.me/yourgroup" class="btn blue">👥 GIA NHẬP NHÓM SOI KÈO</a>
-    <img src="photo_2026-03-19_13-36-22.jpg">
-    <div class="box" style="border-left-color: #ff4444;">
-        <div class="title" style="color:#ff4444">III. NGHỆ THUẬT QUẢN LÝ VỐN</div>
-        <div class="desc">
-            <p><b>Quy tắc 5% (1/20):</b> Chia vốn thành 20 phần. Mỗi trận chỉ dùng đúng 1 phần. Dây đen vẫn còn vốn để chờ thắng.</p>
-            <p><b>Điểm dừng:</b> Thắng gấp đôi thì rút gốc. <span class="highlight" style="color:#ff4444">Thua 3 trận liên tiếp: DỪNG NGAY!</span></p>
-        </div>
-    </div>
-
-    <img src="photo_2026-03-19_13-36-56.jpg">
-    <div class="box">
-        <div class="title">IV. BÍ QUYẾT SOI GÀ THỰC CHIẾN</div>
-        <div class="desc">
-            <ul>
-                <li><span class="highlight">Soi trước trận:</span> Mắt tinh (con ngươi nhỏ), mỏ chặt, cánh mạnh, phân khô đóng cục.</li>
-                <li><span class="highlight">Vết thương:</span> Sặc máu mỏ (trúng phổi), Sệ cánh (trúng hang cua), Quay mòng (trúng đầu/cổ).</li>
-            </ul>
-        </div>
-    </div>
-
-    <img src="photo_2026-03-19_13-35-47.jpg">
-    <a href="https://t.me/yourlink" class="btn gold">🎁 NHẬN CODE TRẢI NGHIỆM</a>
-
-    <img src="photo_2026-03-19_13-35-38.jpg">
-    <div class="box">
-        <div class="title">HỖ TRỢ ĐĂNG KÝ & NẠP RÚT SIÊU TỐC</div>
-        <div class="desc">Hệ thống xử lý tự động 24/7. Uy tín - Bảo mật - Minh bạch tuyệt đối.</div>
-    </div>
+<div class="box">
+<div class="title">📖 CẨM NANG CHIẾN KÊ BIÊN GIỚI</div>
+<p><strong>(Chia sẻ từ cộng đồng – Dành cho anh em đam mê gà CPC & Hà Tiên)</strong></p>
+<p>Đá gà biên giới không chỉ là may rủi, đó là sự kết hợp giữa quan sát tinh tường và kỷ luật thép.</p>
 </div>
 
-<div class="sticky">
-    <a href="https://t.me/chamsochuongdan" class="btn red" style="margin:0">💬 HỖ TRỢ TRỰC TUYẾN 24/7</a>
+<a href="https://t.me/yourlink" class="btn red">▶ XEM TRỰC TIẾP</a>
+
+<img src="https://raw.githubusercontent.com/USERNAME/REPO/main/photo_2026-03-19_13-37-05.jpg">
+
+<div class="box">
+<div class="title">I. TỔNG QUAN ĐẤU TRƯỜNG</div>
+
+<p><strong>Hệ thống CPC (Thomo - Long An)</strong><br>
+• 12h00 – 18h00<br>
+• Gà Mỹ, Asil, Peru – đá nhanh, cực mạnh</p>
+
+<p><strong>Đấu trường Hà Tiên</strong><br>
+• 11h00 – chiều<br>
+• Gà tre – tốc độ cao, lỳ đòn</p>
 </div>
+
+<img src="https://raw.githubusercontent.com/USERNAME/REPO/main/photo_2026-03-19_13-35-57.jpg">
+
+<div class="box">
+<div class="title">II. 6 DÒNG GÀ PHỔ BIẾN</div>
+
+<p>
+• Gà Điều – sung mãn<br>
+• Gà Ô – lì đòn<br>
+• Gà Xám – thông minh<br>
+• Gà Nhạn – tốc độ<br>
+• Gà Khét – đâm hiểm<br>
+• Gà Chuối – lắt léo
+</p>
+</div>
+
+<a href="https://t.me/yourgroup" class="btn blue">👉 VÀO GROUP SOI KÈO</a>
+
+<img src="https://raw.githubusercontent.com/USERNAME/REPO/main/photo_2026-03-19_13-36-22.jpg">
+
+<div class="box">
+<div class="title" style="color:#ff4444">III. QUẢN LÝ VỐN</div>
+
+<p><strong>Quy tắc 5%:</strong><br>
+Chia vốn thành 20 phần – mỗi trận chỉ chơi 1 phần.</p>
+
+<p><strong>Điểm dừng:</strong><br>
+• Thắng gấp đôi → rút<br>
+• Thua 3 trận → nghỉ</p>
+</div>
+
+<img src="https://raw.githubusercontent.com/USERNAME/REPO/main/photo_2026-03-19_13-36-56.jpg">
+
+<div class="box">
+<div class="title">IV. SOI GÀ & VẾT THƯƠNG</div>
+
+<p>
+• Mắt tinh, mỏ chặt, cánh khỏe<br>
+• Phân khô → phong độ cao<br><br>
+
+<strong>Vết thương:</strong><br>
+• Sặc máu → trúng phổi<br>
+• Sệ cánh → mất lực<br>
+• Quay vòng → trúng đầu
+</p>
+</div>
+
+<img src="https://raw.githubusercontent.com/USERNAME/REPO/main/photo_2026-03-19_13-35-47.jpg">
+
+<a href="https://t.me/yourlink" class="btn gold">🎁 NHẬN CODE NGAY</a>
+
+<img src="https://raw.githubusercontent.com/USERNAME/REPO/main/photo_2026-03-19_13-35-38.jpg">
+
+<a href="https://t.me/chamsochuongdan" class="btn blue">🎧 HỖ TRỢ NẠP RÚT</a>
+
+</div>
+
 </body>
 </html>
