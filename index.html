@@ -3,61 +3,106 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>789VL VIP</title>
+    <title>789VL - MẠNG XÃ HỘI VIP</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
     <style>
-        :root {
-            --vip-gold: linear-gradient(180deg, #bf953f, #fcf6ba, #aa771c);
-            --bg-metallic: #0f0f11; /* Màu than từ ảnh bạn gửi */
-            --neon-red: #ff3333; --neon-cyan: #00ffff;
-        }
-        body { margin:0; background: var(--bg-metallic); font-family: sans-serif; color: #ccc; }
-        .wrapper { max-width: 500px; margin: auto; padding: 10px; padding-bottom: 120px; }
-        .header { background: #000; padding: 15px; border-bottom: 2px solid #aa771c; text-align: center; position: sticky; top:0; z-index: 100; }
-        .header-title { font-weight: 900; background: var(--vip-gold); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-size: 18px; text-transform: uppercase; }
-        .post { background: #161618; border-radius: 12px; padding: 15px; margin-bottom: 20px; border: 1px solid #222; }
-        .post-user { font-weight: bold; color: #bf953f; font-size: 16px; display: block; margin-bottom: 8px; }
-        .post-chat { border-radius: 8px; overflow: hidden; background: #000; margin-top: 10px; border: 1px solid #333; }
-        .chat-label { background: #222; font-size: 11px; padding: 6px; font-weight: bold; text-align: center; }
-        iframe { filter: invert(90%) hue-rotate(180deg) brightness(1.1); height: 250px; width: 100%; border: none; }
-        .footer-fixed { position: fixed; bottom: 0; left: 50%; transform: translateX(-50%); width: 100%; max-width: 500px; background: rgba(0,0,0,0.95); border-top: 1px solid #aa771c; display: flex; padding: 12px; gap: 10px; z-index: 10000; box-sizing: border-box; }
-        .btn { flex: 1; text-align: center; padding: 15px; border-radius: 8px; font-weight: 900; text-decoration: none; font-size: 14px; text-transform: uppercase; }
+        :root { --fb-bg: #111; --fb-card: #242526; --fb-text: #e4e6eb; --fb-sub: #b0b3b8; --fb-border: #3e4042; --vip-gold: #bf953f; --gold-grad: linear-gradient(180deg, #bf953f, #fcf6ba, #aa771c); }
+        body { margin:0; background: var(--fb-bg); font-family: 'Roboto', sans-serif; color: var(--fb-text); -webkit-tap-highlight-color: transparent; }
+        .header-fixed { position: sticky; top: 0; z-index: 1000; background: var(--fb-card); border-bottom: 1px solid var(--fb-border); }
+        .header { padding: 10px 15px; display:flex; justify-content:space-between; align-items:center; }
+        .logo { font-weight:900; background: var(--gold-grad); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-size: 22px; text-decoration:none; }
+        .news-ticker { background: #000; color: #fcf6ba; padding: 6px 0; font-size: 13px; overflow: hidden; border-top: 1px solid #333; }
+        .ticker-wrap { display: flex; white-space: nowrap; animation: ticker 30s linear infinite; }
+        @keyframes ticker { 0% { transform: translateX(100%); } 100% { transform: translateX(-100%); } }
+        .wrapper { max-width: 500px; margin: auto; padding-bottom: 120px; }
+        .post { background: var(--fb-card); margin-top: 10px; border-bottom: 1px solid var(--fb-border); position: relative; }
+        .post.pinned::before { content: "📌 ĐÃ GHIM"; position: absolute; top: 12px; right: 12px; font-size: 10px; color: var(--vip-gold); font-weight: bold; border: 1px solid; padding: 2px 5px; border-radius: 4px; }
+        .post-header { padding: 12px; display: flex; align-items: center; gap: 10px; }
+        .avatar { width: 42px; height: 42px; border-radius: 50%; border: 1.5px solid var(--vip-gold); object-fit: cover; }
+        .post-user { font-weight: bold; color: #fff; font-size: 15px; }
+        .post-time { font-size: 12px; color: var(--fb-sub); }
+        .post-content { padding: 0 12px 12px 12px; font-size: 15px; line-height: 1.4; }
+        .post-img { width: 100%; border-top: 1px solid #333; cursor: pointer; display: block; }
+        .stat-bar { padding: 10px 12px; display: flex; justify-content: space-between; font-size: 12px; color: var(--fb-sub); border-bottom: 1px solid var(--fb-border); }
+        .action-bar { display: flex; padding: 4px 0; }
+        .action-item { flex: 1; text-align: center; padding: 10px 0; font-size: 13px; font-weight: 600; color: var(--fb-sub); cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 6px; }
+        .action-item.active { color: #f35369; }
+        .comment-box { background: #1c1d1e; padding: 10px; display: none; border-top: 1px solid #333; }
+        .name-setup { background: #3a3b3c; padding: 20px; border-radius: 12px; text-align: center; }
+        .name-setup input { width: 85%; padding: 12px; border-radius: 25px; border: none; margin-bottom: 12px; outline: none; background: #242526; color: #fff; }
+        .name-setup button { background: var(--gold-grad); border: none; padding: 10px 25px; border-radius: 25px; font-weight: 900; cursor: pointer; }
+        iframe { width: 100%; height: 380px; border: none; border-radius: 10px; background: #000; }
+        .fab-group { position: fixed; right: 15px; bottom: 85px; display: flex; flex-direction: column; gap: 12px; z-index: 2000; }
+        .fab { width: 55px; height: 55px; border-radius: 50%; border: 2px solid var(--vip-gold); display: flex; align-items: center; justify-content: center; text-decoration: none; box-shadow: 0 4px 15px rgba(0,0,0,0.6); background: #222; }
     </style>
 </head>
-<body>
-<div class="header"><span class="header-title">CỘNG ĐỒNG CHUYỆN PHIẾM 789VL</span></div>
-<div class="wrapper">
-        <div class="post" style="border-left: 4px solid var(--neon-red);">
-        <span class="post-user">🐓 TRỰC TIẾP ĐÁ GÀ THOMO</span>
-        <div style="font-size:14px; color:#999;">Cập nhật link xem bồ CPC1 - CPC4. Thảo luận chiến kê tại đây.</div>
-        <div class="post-chat" style="border-color: var(--neon-red);">
-            <div class="chat-label" style="color: var(--neon-red);">BÌNH LUẬN ĐÁ GÀ</div>
-            <iframe src="https://www5.cbox.ws/box/?boxid=962030&boxtag=qa1fpa"></iframe>
-        </div>
+    <body>
+<div class="header-fixed">
+    <div class="header">
+        <a href="#" class="logo">789VL SOCIAL</a>
+        <div style="font-size:20px; display:flex; gap:15px;">🔍 🔔 👤</div>
     </div>
-
-    <div class="post" style="border-left: 4px solid var(--neon-cyan);">
-        <span class="post-user">⚽ SOI KÈO BÓNG ĐÁ</span>
-        <div style="font-size:14px; color:#999;">Phân tích kèo C1, Ngoại hạng Anh đêm nay cùng các cao thủ.</div>
-        <div class="post-chat" style="border-color: var(--neon-cyan);">
-            <div class="chat-label" style="color: var(--neon-cyan);">GÓC CHỐT KÈO BÓNG</div>
-            <iframe src="https://www5.cbox.ws/box/?boxid=962032&boxtag=4GhfZT"></iframe>
-        </div>
-    </div>
-        <div class="post" style="border: 1px solid #aa771c;">
-        <span class="post-user">🎲 DIỄN ĐÀN TÀI XỈU</span>
-        <div style="font-size:14px; color:#999;">Chia sẻ cầu bệt, mẹo bắt vị. Đăng ký nhận code MiniGame tại đây.</div>
-        <div class="post-chat" style="border-color: #aa771c;">
-            <div class="chat-label" style="color: #fcf6ba;">DỰ ĐOÁN NHẬN CODE</div>
-            <iframe src="https://www5.cbox.ws/box/?boxid=962033&boxtag=Iw4cki"></iframe>
-        </div>
-    </div>
-
-    <div class="footer-fixed">
-        <a href="https://www.789vl.vip/gamelobby/hot_games" class="btn" style="background: var(--vip-gold); color: #000;">ĐĂNG KÝ CHƠI</a>
-        <a href="https://t.me/chamsochuongdan" class="btn" style="background: #222; color: #fff; border: 1px solid #444;">HỖ TRỢ CSKH</a>
+    <div class="news-ticker">
+        <div class="ticker-wrap" id="ticker-text">🔥 Đang tải tin tức mới nhất...</div>
     </div>
 </div>
+
+<div class="wrapper" id="post-container">
+    </div>
+
+<div class="fab-group">
+    <a href="https://t.me/chamsochuongdan" class="fab"><img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg" width="30"></a>
+    <a href="https://www.789vl.vip" class="fab" style="background:var(--gold-grad); color:#000; font-size:14px; font-weight:900; text-align:center; line-height:1;">NẠP<br>RÚT</a>
+</div>
+        <script>
+    const POSTS_DATABASE = [
+        {
+            id: 1, isPinned: true, user: "🐓 TRỰC TIẾP ĐÁ GÀ THOMO",
+            avatar: "https://cdn-icons-png.flaticon.com/512/1787/1787077.png",
+            time: "Vừa xong", content: "Link bồ CPC1 - CPC4 đã sẵn sàng. Anh em vào thảo luận!",
+            image: "https://via.placeholder.com/600x350/111/fff?text=LIVE+DA+GA",
+            cboxLink: "https://www5.cbox.ws/box/?boxid=962030&boxtag=qa1fpa", likes: "1.2K"
+        },
+        {
+            id: 2, isPinned: false, user: "⚽ SOI KÈO BÓNG ĐÁ",
+            avatar: "https://cdn-icons-png.flaticon.com/512/732/732245.png",
+            time: "30 phút trước", content: "Kèo C1 đêm nay MU vs Man City cực căng!",
+            image: "https://via.placeholder.com/600x350/111/fff?text=FOOTBALL+NEWS",
+            cboxLink: "https://www5.cbox.ws/box/?boxid=962032&boxtag=4GhfZT", likes: "850"
+        }
+    ];
+
+    function initSocial() {
+        const container = document.getElementById('post-container');
+        const savedName = localStorage.getItem('social_user');
+        POSTS_DATABASE.forEach(post => {
+            let frameUrl = post.cboxLink + (savedName ? "&n=" + encodeURIComponent(savedName) : "");
+            container.innerHTML += `
+                <div class="post ${post.isPinned ? 'pinned' : ''}">
+                    <div class="post-header"><img src="${post.avatar}" class="avatar">
+                    <div class="post-info"><b>${post.user}</b><br><small>${post.time} • 🌏</small></div></div>
+                    <div class="post-content">${post.content}</div>
+                    <img src="${post.image}" class="post-img" onclick="toggleChat(${post.id})">
+                    <div class="stat-bar"><span>❤️ ${post.likes}</span><span>Bình luận</span></div>
+                    <div class="action-bar">
+                        <div class="action-item" onclick="this.classList.toggle('active')">❤️ Thích</div>
+                        <div class="action-item" onclick="toggleChat(${post.id})">💬 Bình luận</div>
+                        <div class="action-item" onclick="window.open('https://imgbb.com/')">📷 Ảnh</div>
+                    </div>
+                    <div class="comment-box" id="cb-${post.id}" style="${savedName ? 'display:block' : ''}">
+                        ${!savedName ? <div class="name-setup"><input type="text" placeholder="Tên của bạn..." id="ni-${post.id}"><button onclick="saveUser(${post.id})">VÀO CHAT</button></div> : 
+                        `<div style="font-size:12px;color:#bf953f;margin-bottom:5px;display:flex;justify-content:space-between;"><span>Chào: <b>${savedName}</b></span><span onclick="resetUser()" style="text-decoration:underline;cursor:pointer">Đổi tên</span></div><iframe src="${frameUrl}"></iframe>`}
+                    </div>
+                </div>`;
+        });
+        document.getElementById('ticker-text').innerText = "🔥 TIN HOT: Khuyến mãi nạp đầu 100% • 🐓 Gà Thomo đang lên đèn • ⚽ Soi kèo MU tối nay...";
+    }
+
+    function toggleChat(id) { let box = document.getElementById('cb-' + id); box.style.display = (box.style.display === 'block') ? 'none' : 'block'; if(box.style.display === 'block') box.scrollIntoView({behavior: "smooth", block: "center"}); }
+    function saveUser(id) { let n = document.getElementById('ni-' + id).value; if(n.length > 1) { localStorage.setItem('social_user', n); location.reload(); } }
+    function resetUser() { localStorage.removeItem('social_user'); location.reload(); }
+    initSocial();
+</script>
 </body>
 </html>
-        
         
