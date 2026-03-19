@@ -5,100 +5,103 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>789VL - Cẩm Nang Chiến Kê</title>
 <style>
-    :root { --gold: #E6C15A; --bg: #0b0d10; --card: #15171c; }
-    body { margin:0; background:var(--bg); font-family:sans-serif; color:#d1d5db; line-height:1.6; }
-    .wrapper { max-width: 650px; margin: auto; padding: 15px; padding-bottom: 120px; }
-    .img-container { max-width: 550px; margin: 15px auto; border-radius: 12px; overflow: hidden; border: 1px solid #333; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
-    img { width: 100%; display: block; height: auto; }
-    .box { background:var(--card); padding: 18px; border-radius: 12px; border-left: 5px solid var(--gold); margin-bottom: 25px; font-size: 14px; text-align: left; }
-    .title { color:var(--gold); font-weight: bold; text-transform: uppercase; margin-bottom: 10px; font-size: 16px; }
-    .btn { display: block; text-align: center; padding: 16px; border-radius: 12px; font-weight: bold; margin: 20px auto; max-width: 400px; text-decoration: none; color: #fff; text-transform: uppercase; transition: 0.3s; animation: pulse 2s infinite; }
+    :root { --gold: linear-gradient(135deg, #C9A227, #E6C15A); --bg: #0b0d10; --card: #15171c; }
+    body { margin:0; background:var(--bg); font-family:-apple-system, sans-serif; color:#d1d5db; line-height:1.6; overflow-x: hidden; }
+    .wrapper { max-width: 750px; margin: auto; padding: 20px; padding-bottom: 120px; }
+    .section { margin-bottom: 35px; text-align: center; animation: fadeIn 0.8s ease-out; }
+    .img-wrap { position: relative; max-width: 500px; margin: 0 auto 15px; border-radius: 15px; padding: 3px; background: var(--gold); box-shadow: 0 10px 30px rgba(0,0,0,0.6); }
+    img { width: 100%; display: block; border-radius: 12px; }
+    .box { background:var(--card); padding: 22px; border-radius: 15px; border: 1px solid #333; text-align: left; position: relative; overflow: hidden; }
+    .box::after { content: ""; position: absolute; top: 0; left: 0; width: 4px; height: 100%; background: var(--gold); }
+    .title { color:#E6C15A; font-weight: 800; font-size: 19px; margin-bottom: 12px; text-transform: uppercase; letter-spacing: 1px; }
+    .btn { display: block; text-align: center; padding: 18px; border-radius: 12px; font-weight: bold; margin: 20px auto; max-width: 380px; text-decoration: none; color: #fff; text-transform: uppercase; transition: 0.4s; box-shadow: 0 4px 15px rgba(0,0,0,0.4); }
     .red { background: linear-gradient(180deg, #E53935, #9B181B); }
     .blue { background: linear-gradient(180deg, #2563EB, #1E3A8A); }
-    .gold { background: linear-gradient(180deg, #C9A227, #E6C15A); color: #000; }
-    @keyframes pulse { 0% {transform: scale(1);} 50% {transform: scale(1.03);} 100% {transform: scale(1);} }
-    #fomo-toast { position: fixed; bottom: 100px; left: 15px; background: rgba(21, 23, 28, 0.95); border: 1px solid var(--gold); padding: 12px; border-radius: 10px; font-size: 12px; display: none; z-index: 9999; box-shadow: 0 5px 20px rgba(0,0,0,0.8); }
-    .sticky-bar { position: fixed; bottom: 0; left: 0; right: 0; background: #0b0d10; padding: 12px; display: flex; gap: 10px; border-top: 1px solid #333; z-index: 1000; justify-content: center; }
-    .sticky-bar .btn { margin: 0; flex: 1; max-width: 280px; animation: none; }
+    .gold-btn { background: var(--gold); color: #000; }
+    .btn:hover { transform: translateY(-3px) scale(1.02); filter: brightness(1.2); }
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+    .badge { background: #E53935; color: white; padding: 2px 8px; border-radius: 4px; font-size: 12px; margin-left: 5px; }
 </style>
 </head>
 <body>
 <div class="wrapper">
-    <div class="img-container"><img src="photo_2026-03-19_13-37-12.jpg"></div>
-    <div class="box">
-        <div class="title">📖 CẨM NANG CHIẾN KÊ BIÊN GIỚI</div>
-        (Chia sẻ từ cộng đồng – Dành cho anh em đam mê gà CPC & Hà Tiên)<br><br>
-        Đá gà biên giới không chỉ là may rủi, đó là sự kết hợp giữa <b>quan sát tinh tường</b> và <b>kỷ luật thép</b>. Bản cẩm nang này giúp anh em nắm chắc phần thắng.
+    <div class="section">
+        <div class="img-wrap"><img src="photo_2026-03-19_13-37-12.jpg"></div>
+        <div class="box">
+            <div class="title">📖 CẨM NANG CHIẾN KÊ BIÊN GIỚI</div>
+            Đá gà biên giới không chỉ là may rủi, đó là sự kết hợp giữa <b>quan sát tinh tường</b> và <b>kỷ luật thép</b>. Bản cẩm nang này giúp anh em nắm chắc phần thắng trong tay.
+        </div>
+        <a href="https://t.me/yourlink" class="btn red">🔴 XEM LIVE TRỰC TIẾP NGAY</a>
     </div>
-    <a href="https://t.me/yourlink" class="btn red">🔴 XEM LIVE TRỰC TIẾP</a>
-
-    <div class="img-container"><img src="photo_2026-03-19_13-37-05.jpg"></div>
-    <div class="box">
-        <div class="title">I. TỔNG QUAN ĐẤU TRƯỜNG & GIỜ VÀNG</div>
-        • <b>CPC (Thomo):</b> 12h00 - 18h00. Gà nòi lai đòn nặng, kết thúc cực nhanh.<br>
-        • <b>Hà Tiên:</b> Từ 11h00 sáng. "Thánh địa" gà Tre với tốc độ và độ lỳ cực cao.
+    <div class="section">
+        <div class="img-wrap"><img src="photo_2026-03-19_13-37-05.jpg"></div>
+        <div class="box">
+            <div class="title">I. TỔNG QUAN & GIỜ VÀNG <span class="badge">LIVE</span></div>
+            • <b>CPC (Thomo):</b> 12h00 - 18h00. Gà nòi lai đòn nặng, kết thúc cực nhanh.<br>
+            • <b>Hà Tiên:</b> Từ 11h00 sáng. Gà Tre tốc độ, lội ngược dòng thần sầu.
+        </div>
     </div>
-
-    <div class="img-container"><img src="photo_2026-03-19_13-35-57.jpg"></div>
-    <div class="box">
-        <div class="title">II. NHẬN DIỆN 6 DÒNG LÔNG</div>
-        Điều (sung mãn), Ô (lỳ lợm), Xám (đá đầu óc), Nhạn (bay nạp), Khét (đâm hiểm), Chuối (lắt léo). Nhìn màu lông gọi tên dòng gà chuẩn xác.
+    <div class="section">
+        <div class="img-wrap"><img src="photo_2026-03-19_13-35-57.jpg"></div>
+        <div class="box">
+            <div class="title">II. NHẬN DIỆN 6 DÒNG LÔNG</div>
+            Điều, Ô, Xám, Nhạn, Khét, Chuối. Cáp đúng màu mạng để tăng 30% tỷ lệ thắng.
+        </div>
+        <a href="https://t.me/yourlink" class="btn blue">👥 VÀO NHÓM LẤY KÈO VIP</a>
     </div>
-    <a href="https://t.me/yourlink" class="btn blue">👉 VÀO NHÓM SOI KÈO</a>
-
-    <div class="img-container"><img src="photo_2026-03-19_13-36-22.jpg"></div>
-    <div class="box">
-        <div class="title">III. KỶ LUẬT QUẢN LÝ VỐN 5%</div>
-        Chia vốn thành 20 phần. Mỗi trận dùng đúng 1 phần (5%). Thắng gấp đôi rút gốc, thua 3 trận nghỉ ngay để bảo toàn gia đình.
+    <div class="section">
+        <div class="img-wrap"><img src="photo_2026-03-19_13-36-22.jpg"></div>
+        <div class="box">
+            <div class="title" style="color:#ff4444">III. QUẢN LÝ VỐN 5%</div>
+            Chia vốn 20 phần. Thắng gấp đôi -> Rút gốc. Thua 3 trận -> Nghỉ ngay. Kỷ luật là con đường duy nhất để làm giàu từ đam mê.
+        </div>
     </div>
-    <div class="img-container"><img src="photo_2026-03-19_13-36-56.jpg"></div>
-    <div class="box">
-        <div class="title">IV. BÍ QUYẾT SOI GÀ & VẾT THƯƠNG</div>
-        Check: Mắt tinh, mỏ chặt, cánh mạnh. <br>
-        <b>Vết thương chí mạng:</b> Sặc máu mỏ (Phổi), Sệ cánh (Nách), Quay mòng mòng (Đầu/Cổ) -> Quay xe ngay!
+    <div class="section">
+        <div class="img-wrap"><img src="photo_2026-03-19_13-36-56.jpg"></div>
+        <div class="box">
+            <div class="title">IV. SOI GÀ & VẾT THƯƠNG</div>
+            Nhận biết sặc máu phổi, sệ cánh, quay mòng mòng để đưa ra quyết định đặt cửa chính xác trong 5 giây đầu.
+        </div>
     </div>
-
-    <div class="img-container"><img src="photo_2026-03-19_13-35-47.jpg"></div>
-    <a href="https://t.me/yourlink" class="btn gold">🎁 NHẬN CODE TRẢI NGHIỆM</a>
-
-    <div class="img-container"><img src="photo_2026-03-19_13-35-38.jpg"></div>
-    <div class="box">
-        <div class="title">HỖ TRỢ ĐĂNG KÝ & NẠP RÚT</div>
-        Hệ thống tự động 24/7. Uy tín - Siêu tốc - Bảo mật. Nạp rút trong 3 phút cho anh em sư kê.
+    <div class="section">
+        <div class="img-wrap"><img src="photo_2026-03-19_13-35-47.jpg"></div>
+        <a href="https://t.me/yourlink" class="btn gold-btn">🎁 NHẬN CODE 100K TRẢI NGHIỆM</a>
+        <div class="img-wrap" style="margin-top:30px"><img src="photo_2026-03-19_13-35-38.jpg"></div>
+        <div class="box">
+            <div class="title">HỖ TRỢ NẠP RÚT SIÊU TỐC</div>
+            Uy tín 5 sao. Nạp rút tự động trong 3 phút. Bảo mật thông tin tuyệt đối.
+        </div>
     </div>
 </div>
 
-<div id="fomo-toast"></div>
+<div id="exit-popup" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.9); z-index:10000; justify-content:center; align-items:center;">
+    <div style="background:#1a1d23; padding:30px; border-radius:20px; text-align:center; border:2px solid #E6C15A; max-width:320px;">
+        <h2 style="color:#E6C15A">KHOAN ĐÃ! 🎁</h2>
+        <p>Bạn nhận được 1 mã khuyến mãi <b>NẠP 1 TẶNG 1</b> chưa sử dụng.</p>
+        <a href="https://t.me/yourlink" class="btn red" style="margin:0">NHẬN NGAY RỒI ĐI</a>
+        <button onclick="document.getElementById('exit-popup').style.display='none'" style="background:none; border:none; color:#666; margin-top:15px; cursor:pointer;">Để sau</button>
+    </div>
+</div>
 
-<div class="sticky-bar">
-    <a href="https://t.me/yourlink" class="btn red">LIVE TRỰC TIẾP</a>
-    <a href="https://t.me/chamsochuongdan" class="btn blue">HỖ TRỢ 24/7</a>
+<div style="position:fixed; bottom:0; width:100%; background:#111; padding:12px; display:flex; gap:10px; z-index:999; border-top:1px solid #333; box-sizing:border-box;">
+    <a href="https://t.me/yourlink" class="btn red" style="flex:1; margin:0">LIVE ĐÁ GÀ</a>
+    <a href="https://t.me/chamsochuongdan" class="btn blue" style="flex:1; margin:0">HỖ TRỢ CSKH</a>
 </div>
 
 <script>
-    // 1. POPUP RÚT TIỀN (TẠO NIỀM TIN)
-    const users = ["Anh Hùng", "Sư Kê 88", "Minh Thomo", "Trần Long", "Văn Nam", "Kê Vương"];
-    const money = ["2.500k", "5.000k", "800k", "12.000k", "3.200k"];
-    function showWinner() {
-        const toast = document.getElementById("fomo-toast");
-        const user = users[Math.floor(Math.random()*users.length)];
-        const cash = money[Math.floor(Math.random()*money.length)];
-        toast.innerHTML = ✅ <b>${user}</b> vừa rút thành công <b>${cash}</b>!;
-        toast.style.display = "block";
-        setTimeout(() => { toast.style.display = "none"; }, 4000);
-    }
-    setInterval(showWinner, 9000);
-
-    // 2. SCRIPT TRACKING
-    document.querySelectorAll(".btn").forEach(el => {
-        el.addEventListener("click", () => {
-            const trackData = {
-                action: "Click_" + el.innerText,
-                time: new Date().toLocaleString(),
-                device: navigator.platform
-            };
-            console.log("Tracking gửi về:", trackData);
-            // fetch('URL_SERVER_CUA_BAN', {method:'POST', body: JSON.stringify(trackData)});
+    // 1. Popup khi khách định thoát trang (chỉ hiện 1 lần)
+    let showExit = false;
+    document.addEventListener("mouseleave", (e) => {
+        if (e.clientY < 0 && !showExit) {
+            document.getElementById("exit-popup").style.display = "flex";
+            showExit = true;
+        }
+    });
+    // 2. Tracking Click nâng cao
+    document.querySelectorAll('.btn').forEach(b => {
+        b.addEventListener('click', () => {
+            console.log("Khách quan tâm đến: " + b.innerText);
+            // Gửi tín hiệu về Bot Telegram tại đây
         });
     });
 </script>
