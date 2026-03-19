@@ -2,108 +2,87 @@
 <html lang="vi">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>789VL - Cẩm Nang Chiến Kê</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>789VL - ĐẤU TRƯỜNG SINH TỬ</title>
 <style>
-    :root { --gold: linear-gradient(135deg, #C9A227, #E6C15A); --bg: #0b0d10; --card: #15171c; }
-    body { margin:0; background:var(--bg); font-family:-apple-system, sans-serif; color:#d1d5db; line-height:1.6; overflow-x: hidden; }
-    .wrapper { max-width: 750px; margin: auto; padding: 20px; padding-bottom: 120px; }
-    .section { margin-bottom: 35px; text-align: center; animation: fadeIn 0.8s ease-out; }
-    .img-wrap { position: relative; max-width: 500px; margin: 0 auto 15px; border-radius: 15px; padding: 3px; background: var(--gold); box-shadow: 0 10px 30px rgba(0,0,0,0.6); }
-    img { width: 100%; display: block; border-radius: 12px; }
-    .box { background:var(--card); padding: 22px; border-radius: 15px; border: 1px solid #333; text-align: left; position: relative; overflow: hidden; }
-    .box::after { content: ""; position: absolute; top: 0; left: 0; width: 4px; height: 100%; background: var(--gold); }
-    .title { color:#E6C15A; font-weight: 800; font-size: 19px; margin-bottom: 12px; text-transform: uppercase; letter-spacing: 1px; }
-    .btn { display: block; text-align: center; padding: 18px; border-radius: 12px; font-weight: bold; margin: 20px auto; max-width: 380px; text-decoration: none; color: #fff; text-transform: uppercase; transition: 0.4s; box-shadow: 0 4px 15px rgba(0,0,0,0.4); }
-    .red { background: linear-gradient(180deg, #E53935, #9B181B); }
-    .blue { background: linear-gradient(180deg, #2563EB, #1E3A8A); }
-    .gold-btn { background: var(--gold); color: #000; }
-    .btn:hover { transform: translateY(-3px) scale(1.02); filter: brightness(1.2); }
-    @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
-    .badge { background: #E53935; color: white; padding: 2px 8px; border-radius: 4px; font-size: 12px; margin-left: 5px; }
+    :root { --gold: linear-gradient(90deg, #bf953f, #fcf6ba, #b38728, #fcf6ba, #aa771c); --red: linear-gradient(180deg, #ff4d4d, #b30000); }
+    body { margin:0; background:#050505; font-family:sans-serif; color:#eee; overflow-x:hidden; -webkit-tap-highlight-color: transparent; }
+    .wrapper { max-width: 600px; margin: auto; padding: 15px; padding-bottom: 140px; }
+    .live-status { background: rgba(255,0,0,0.15); border: 1px solid #ff0000; padding: 6px 15px; border-radius: 20px; display: inline-flex; align-items: center; font-size: 13px; margin: 10px 0; font-weight: bold; color: #ff4d4d; }
+    .dot { width: 10px; height: 10px; background: #ff0000; border-radius: 50%; margin-right: 8px; animation: blink 1s infinite; }
+    .img-box { position: relative; margin: 20px 0; border-radius: 15px; padding: 2px; background: var(--gold); box-shadow: 0 0 15px rgba(191,149,63,0.3); }
+    img { width: 100%; display: block; border-radius: 13px; }
+    .content-box { background: linear-gradient(145deg, #1a1a1a, #0a0a0a); padding: 18px; border-radius: 15px; border: 1px solid #333; margin-top: -10px; position: relative; z-index: 2; }
+    .title { background: var(--gold); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-weight: 900; font-size: 19px; text-transform: uppercase; margin-bottom: 8px; }
+    .btn-vip { display: block; text-align: center; padding: 18px; border-radius: 12px; font-weight: 900; margin: 15px 0; text-decoration: none; color: #fff; text-transform: uppercase; font-size: 16px; transition: 0.3s; box-shadow: 0 5px 15px rgba(255,0,0,0.3); }
+    .btn-red { background: var(--red); animation: shake 5s infinite; }
+    .btn-gold { background: var(--gold); color: #000; }
+    .btn-blue { background: linear-gradient(180deg, #2196F3, #0D47A1); }
+    @keyframes blink { 0% {opacity: 1;} 50% {opacity: 0.3;} 100% {opacity: 1;} }
+    @keyframes shake { 0%, 100% {transform: scale(1);} 10%, 20% {transform: scale(1.05) rotate(1deg);} 15%, 25% {transform: scale(1.05) rotate(-1deg);} }
+    #noti-box { position: fixed; bottom: 100px; left: 10px; right: 10px; background: rgba(0,0,0,0.9); border: 1px solid #bf953f; padding: 10px; border-radius: 10px; font-size: 12px; display: none; z-index: 9999; text-align: center; }
 </style>
 </head>
 <body>
 <div class="wrapper">
-    <div class="section">
-        <div class="img-wrap"><img src="photo_2026-03-19_13-37-12.jpg"></div>
-        <div class="box">
-            <div class="title">📖 CẨM NANG CHIẾN KÊ BIÊN GIỚI</div>
-            Đá gà biên giới không chỉ là may rủi, đó là sự kết hợp giữa <b>quan sát tinh tường</b> và <b>kỷ luật thép</b>. Bản cẩm nang này giúp anh em nắm chắc phần thắng trong tay.
-        </div>
-        <a href="https://t.me/yourlink" class="btn red">🔴 XEM LIVE TRỰC TIẾP NGAY</a>
-    </div>
-    <div class="section">
-        <div class="img-wrap"><img src="photo_2026-03-19_13-37-05.jpg"></div>
-        <div class="box">
-            <div class="title">I. TỔNG QUAN & GIỜ VÀNG <span class="badge">LIVE</span></div>
-            • <b>CPC (Thomo):</b> 12h00 - 18h00. Gà nòi lai đòn nặng, kết thúc cực nhanh.<br>
-            • <b>Hà Tiên:</b> Từ 11h00 sáng. Gà Tre tốc độ, lội ngược dòng thần sầu.
-        </div>
-    </div>
-    <div class="section">
-        <div class="img-wrap"><img src="photo_2026-03-19_13-35-57.jpg"></div>
-        <div class="box">
-            <div class="title">II. NHẬN DIỆN 6 DÒNG LÔNG</div>
-            Điều, Ô, Xám, Nhạn, Khét, Chuối. Cáp đúng màu mạng để tăng 30% tỷ lệ thắng.
-        </div>
-        <a href="https://t.me/yourlink" class="btn blue">👥 VÀO NHÓM LẤY KÈO VIP</a>
-    </div>
-    <div class="section">
-        <div class="img-wrap"><img src="photo_2026-03-19_13-36-22.jpg"></div>
-        <div class="box">
-            <div class="title" style="color:#ff4444">III. QUẢN LÝ VỐN 5%</div>
-            Chia vốn 20 phần. Thắng gấp đôi -> Rút gốc. Thua 3 trận -> Nghỉ ngay. Kỷ luật là con đường duy nhất để làm giàu từ đam mê.
-        </div>
-    </div>
-    <div class="section">
-        <div class="img-wrap"><img src="photo_2026-03-19_13-36-56.jpg"></div>
-        <div class="box">
-            <div class="title">IV. SOI GÀ & VẾT THƯƠNG</div>
-            Nhận biết sặc máu phổi, sệ cánh, quay mòng mòng để đưa ra quyết định đặt cửa chính xác trong 5 giây đầu.
-        </div>
-    </div>
-    <div class="section">
-        <div class="img-wrap"><img src="photo_2026-03-19_13-35-47.jpg"></div>
-        <a href="https://t.me/yourlink" class="btn gold-btn">🎁 NHẬN CODE 100K TRẢI NGHIỆM</a>
-        <div class="img-wrap" style="margin-top:30px"><img src="photo_2026-03-19_13-35-38.jpg"></div>
-        <div class="box">
-            <div class="title">HỖ TRỢ NẠP RÚT SIÊU TỐC</div>
-            Uy tín 5 sao. Nạp rút tự động trong 3 phút. Bảo mật thông tin tuyệt đối.
-        </div>
-    </div>
-</div>
+    <center><div class="live-status"><span class="dot"></span> TRỰC TIẾP: 1,428 NGƯỜI ĐANG XEM</div></center>
 
-<div id="exit-popup" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.9); z-index:10000; justify-content:center; align-items:center;">
-    <div style="background:#1a1d23; padding:30px; border-radius:20px; text-align:center; border:2px solid #E6C15A; max-width:320px;">
-        <h2 style="color:#E6C15A">KHOAN ĐÃ! 🎁</h2>
-        <p>Bạn nhận được 1 mã khuyến mãi <b>NẠP 1 TẶNG 1</b> chưa sử dụng.</p>
-        <a href="https://t.me/yourlink" class="btn red" style="margin:0">NHẬN NGAY RỒI ĐI</a>
-        <button onclick="document.getElementById('exit-popup').style.display='none'" style="background:none; border:none; color:#666; margin-top:15px; cursor:pointer;">Để sau</button>
-    </div>
-</div>
+    <div class="img-box"><img src="photo_2026-03-19_13-37-12.jpg"></div>
+    <div class="content-box"><div class="title">📖 CẨM NANG CHIẾN KÊ</div>Bí mật từ các tay chơi bạc tỷ tại Thomo. Đừng vào tiền nếu chưa đọc hết bản hướng dẫn này!</div>
+    <a href="https://triokitchenbar.co.uk" target="_blank" class="btn-vip btn-red tracking-btn">🔥 XEM ĐÁ GÀ TRỰC TIẾP</a>
 
-<div style="position:fixed; bottom:0; width:100%; background:#111; padding:12px; display:flex; gap:10px; z-index:999; border-top:1px solid #333; box-sizing:border-box;">
-    <a href="https://t.me/yourlink" class="btn red" style="flex:1; margin:0">LIVE ĐÁ GÀ</a>
-    <a href="https://t.me/chamsochuongdan" class="btn blue" style="flex:1; margin:0">HỖ TRỢ CSKH</a>
-</div>
+    <div class="img-box"><img src="photo_2026-03-19_13-37-05.jpg"></div>
+    <div class="content-box"><div class="title">I. ĐẤU TRƯỜNG & GIỜ VÀNG</div>Tận dụng khung giờ 12h-18h để săn kèo. Gà nòi Thomo mạnh mẽ hay gà Tre lỳ lợm? Vào nhóm lấy kèo ngay.</div>
+    <div class="img-box"><img src="photo_2026-03-19_13-35-57.jpg"></div>
+    <div class="content-box"><div class="title">II. TỬ VI 6 DÒNG LÔNG</div>Khắc chế màu mạng, chọn gà đúng ngày - Thắng bại tại kỹ năng nhìn lông đoán đòn.</div>
+    <a href="https://t.me/PhongChat1" target="_blank" class="btn-vip btn-blue tracking-btn">👉 VÀO PHÒNG CHÁT LẤY KÈO</a>
 
+    <div class="img-box"><img src="photo_2026-03-19_13-36-22.jpg"></div>
+    <div class="content-box"><div class="title" style="color:#ff4d4d !important; -webkit-text-fill-color: initial;">III. QUẢN LÝ VỐN TỬ THẦN</div>Quy tắc 5%: Không bao giờ cháy tài khoản. Người thắng là người biết dừng đúng lúc.</div>
+    <a href="https://www.789vl.vip/gamelobby/hot_games" target="_blank" class="btn-vip btn-gold tracking-btn">💰 ĐĂNG KÝ - NẠP RÚT NHANH</a>
+
+    <div class="img-box"><img src="photo_2026-03-19_13-36-56.jpg"></div>
+    <div class="content-box"><div class="title">IV. SOI VẾT THƯƠNG CHÍ MẠNG</div>Đọc vị gà sặc máu, sệ cánh trong 1 nốt nhạc để lật kèo đỉnh cao.</div>
+
+    <div class="img-box"><img src="photo_2026-03-19_13-35-47.jpg"></div>
+    <a href="https://t.me/PhongChat1" target="_blank" class="btn-vip btn-gold tracking-btn" style="animation: pulse 1.5s infinite;">🎁 NHẬN LỘC 100K FREE</a>
+
+    <div class="img-box"><img src="photo_2026-03-19_13-35-38.jpg"></div>
+</div>
+<div id="noti-box"></div>
+<div style="position:fixed; bottom:0; left:0; width:100%; background:#000; border-top:2px solid #bf953f; display:flex; padding:12px; box-sizing:border-box; z-index:9999; gap:10px;">
+    <a href="https://triokitchenbar.co.uk" target="_blank" class="tracking-btn" style="flex:1.2; background:var(--red); text-decoration:none; color:#fff; text-align:center; padding:14px; border-radius:8px; font-weight:900; font-size:14px;">XEM LIVE HD</a>
+    <a href="https://t.me/chamsochuongdan" target="_blank" class="tracking-btn" style="flex:1; background:linear-gradient(180deg,#444,#111); text-decoration:none; color:#fff; text-align:center; padding:14px; border-radius:8px; font-weight:900; font-size:14px; border:1px solid #444;">HỖ TRỢ CSKH</a>
+</div>
 <script>
-    // 1. Popup khi khách định thoát trang (chỉ hiện 1 lần)
-    let showExit = false;
-    document.addEventListener("mouseleave", (e) => {
-        if (e.clientY < 0 && !showExit) {
-            document.getElementById("exit-popup").style.display = "flex";
-            showExit = true;
+    const SERVER_URL = "https://san-khach-789vl.onrender.com"; 
+
+    function sendTracking(action) {
+        const u_id = localStorage.getItem("789vl_uid") || "SK_" + Math.random().toString(36).substr(2, 5);
+        localStorage.setItem("789vl_uid", u_id);
+        const data = { userId: u_id, action: action, source: new URLSearchParams(window.location.search).get('ref') || "Mobile/Web", time: new Date().toLocaleString('vi-VN') };
+
+        if (navigator.sendBeacon) {
+            navigator.sendBeacon(`${SERVER_URL}/track`, JSON.stringify(data));
+        } else {
+            fetch(`${SERVER_URL}/track`, { method: 'POST', mode: 'no-cors', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(data) }).catch(()=>{});
         }
+    }
+
+    document.querySelectorAll('.tracking-btn, .btn-vip').forEach(btn => {
+        btn.addEventListener('click', function() { sendTracking("BẤM: " + this.innerText); });
     });
-    // 2. Tracking Click nâng cao
-    document.querySelectorAll('.btn').forEach(b => {
-        b.addEventListener('click', () => {
-            console.log("Khách quan tâm đến: " + b.innerText);
-            // Gửi tín hiệu về Bot Telegram tại đây
-        });
-    });
+
+    const names = ["Anh Hải", "Sư Kê 79", "Thắng Thomo", "Trọng Hà Tiên", "Văn Long"];
+    const money = ["5.000.000đ", "12.500.000đ", "2.200.000đ", "45.000.000đ"];
+    function showNoti() {
+        const n = document.getElementById("noti-box");
+        n.innerHTML = 💰 <b>${names[Math.floor(Math.random()*names.length)]}</b> vừa rút thành công <b>${money[Math.floor(Math.random()*money.length)]}</b>;
+        n.style.display = "block";
+        setTimeout(() => { n.style.display = "none"; }, 4000);
+    }
+    setInterval(showNoti, 10000);
+    window.onload = () => sendTracking("VÀO XEM WEB");
 </script>
 </body>
 </html>
