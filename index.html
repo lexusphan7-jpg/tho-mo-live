@@ -3,54 +3,83 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>789VL - TRỤ SỞ CHIẾN KÊ</title>
+    <title>789VL - CỘNG ĐỒNG CHIẾN KÊ</title>
     <style>
         :root { --gold: linear-gradient(90deg, #bf953f, #fcf6ba, #b38728, #fcf6ba, #aa771c); }
-        body { margin:0; background:#000; font-family:sans-serif; color:#eee; line-height:1.6; }
-        .wrapper { max-width: 550px; margin: auto; padding: 10px; padding-bottom: 120px; }
-        .news-box { background: #111; border: 1px solid #333; border-radius: 12px; padding: 15px; margin-bottom: 20px; box-shadow: 0 4px 10px rgba(0,0,0,0.5); }
-        .news-title { background: var(--gold); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-weight: 900; font-size: 18px; text-transform: uppercase; border-bottom: 1px solid #333; padding-bottom: 10px; margin-bottom: 15px; display: block; text-align: center; }
-        .img-box { border: 1.5px solid #bf953f; border-radius: 10px; overflow: hidden; margin-bottom: 15px; }
-        img { width: 100%; display: block; }
-        .btn-vip { display: block; text-align: center; padding: 15px; border-radius: 10px; font-weight: 900; margin-bottom: 15px; text-decoration: none; color: #fff; text-transform: uppercase; }
-        .btn-red { background: linear-gradient(180deg, #ff4d4d, #b30000); }
-        .btn-gold { background: var(--gold); color: #000 !important; }
-        .shake { animation: shakeBtn 5s infinite; }
-        @keyframes shakeBtn { 0%, 100% {transform: scale(1);} 10%, 20% {transform: scale(1.05) rotate(1deg);} 15%, 25% {transform: scale(1.05) rotate(-1deg);} }
+        body { margin:0; background:#000; font-family: sans-serif; color:#eee; }
+        .wrapper { max-width: 500px; margin: auto; padding-bottom: 100px; }
+        
+        /* Header kiểu Group Facebook */
+        .header { background: #111; padding: 15px; border-bottom: 1px solid #333; position: sticky; top:0; z-index: 100; display: flex; align-items: center; gap: 10px;}
+        .header img { width: 40px; border-radius: 50%; border: 1px solid #bf953f; }
+        .header-title { font-weight: 900; background: var(--gold); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-size: 20px; }
+
+        /* Ô chát thu nhỏ */
+        .chat-box { background: #111; padding: 10px; margin-bottom: 10px; border-bottom: 5px solid #000; }
+        
+        /* Bài đăng Timeline */
+        .post { background: #111; margin-bottom: 10px; padding: 15px; border-top: 1px solid #333; border-bottom: 1px solid #333; }
+        .post-header { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; }
+        .post-header .avatar { width: 35px; height: 35px; background: var(--gold); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #000; font-weight: bold; font-size: 12px; }
+        .post-info { line-height: 1.2; }
+        .post-user { font-weight: bold; color: #bf953f; font-size: 15px; }
+        .post-time { font-size: 11px; color: #666; }
+        .post-content { font-size: 15px; margin-bottom: 10px; line-height: 1.4; }
+        .post-img { width: 100%; border-radius: 8px; border: 1px solid #222; }
+        
+        /* Nút tương tác giả */
+        .post-action { display: flex; border-top: 1px solid #222; margin-top: 10px; padding-top: 10px; gap: 20px; color: #888; font-size: 13px; }
     </style>
 </head>
 <body>
-<div class="wrapper">
-    <div class="news-box">
-        <span class="news-title">🔴 TRỰC TIẾP & LỊCH ĐẤU</span>
-        <div class="img-box">
-            <img src="https://i.imgur.com/vHqY7bE.png" alt="Banner Live">
-        </div>
-        <p><b>● SÁNG:</b> Cập nhật kèo bồ CPC1 - CPC4.</p>
-        <p><b>● TRƯA:</b> Phát trực tiếp HD không giật lag.</p>
-        <a href="https://triokitchenbar.co.uk" class="btn-vip btn-red shake">🔥 XEM ĐÁ GÀ TRỰC TIẾP</a>
-    </div>
-    <div class="news-box" style="border: 2px solid #bf953f;">
-        <span class="news-title">💬 THẢO LUẬN ẨN DANH</span>
-        <div style="border-radius: 8px; overflow: hidden; background: #fff;">
-            <iframe src="https://www5.cbox.ws/box/?boxid=962030&boxtag=qa1fpa" width="100%" height="450" allowtransparency="yes" allow="autoplay" frameborder="0" marginheight="0" marginwidth="0" scrolling="auto"></iframe>
-        </div>
-    </div>
 
-    <div class="news-box">
-        <span class="news-title">📖 CẨM NANG CHIẾN KÊ</span>
-        <div class="img-box">
-            <img src="https://i.imgur.com/f0mRzBf.png" alt="Cẩm nang">
-        </div>
-        <p>Quan sát trạng gà, màu lông và cách vào nước. Quản lý vốn 5% mỗi trận là chìa khóa chiến thắng bền vững tại bồ Thomo.</p>
-        <a href="https://t.me/PhongChat1" class="btn-vip btn-gold">👉 VÀO NHÓM LẤY KÈO VIP</a>
-        <a href="https://www.789vl.vip/gamelobby/hot_games" class="btn-vip btn-gold">💰 ĐĂNG KÝ & NẠP RÚT</a>
-    </div>
+<div class="header">
+    <img src="https://i.imgur.com/vHqY7bE.png" alt="Logo">
+    <div class="header-title">CỘNG ĐỒNG 789VL</div>
 </div>
 
-<div style="position:fixed;bottom:0;left:0;width:100%;background:#000;border-top:2px solid #bf953f;display:flex;padding:10px;box-sizing:border-box;z-index:9999;gap:10px;">
-    <a href="https://triokitchenbar.co.uk" style="flex:1.2;background:linear-gradient(180deg, #ff4d4d, #b30000);color:#fff;text-align:center;padding:15px;border-radius:8px;font-weight:900;text-decoration:none;">XEM LIVE</a>
-    <a href="https://t.me/chamsochuongdan" style="flex:1;background:#222;color:#fff;text-align:center;padding:15px;border-radius:8px;font-weight:900;text-decoration:none;border:1px solid #444;">HỖ TRỢ</a>
+<div class="wrapper">
+    <div class="chat-box">
+        <div style="border-radius: 10px; overflow: hidden; background: #1a1a1a;">
+            <iframe src="https://www5.cbox.ws/box/?boxid=962030&boxtag=qa1fpa&sec=main" width="100%" height="300" allowtransparency="yes" frameborder="0" scrolling="auto" style="filter: invert(90%) hue-rotate(180deg) brightness(1.2);"></iframe>
+        </div>
+    </div>
+<div class="post">
+        <div class="post-header">
+            <div class="avatar">AD</div>
+            <div class="post-info">
+                <div class="post-user">Quản Trị Viên (789VL)</div>
+                <div class="post-time">Vừa xong • 🌐 Công khai</div>
+            </div>
+        </div>
+        <div class="post-content">
+            🔴 <b>THÔNG BÁO LIVE:</b> Bồ CPC1 bắt đầu đá rồi anh em ơi! Link HD không giật lag đã cập nhật. Anh em vào chấm hóng lấy lộc đầu giờ nào!
+        </div>
+        <a href="https://triokitchenbar.co.uk" style="text-decoration:none;">
+            <img src="https://i.imgur.com/vHqY7bE.png" class="post-img" alt="Ảnh live">
+            <div style="background:#222; padding:10px; border-radius:0 0 8px 8px; color:#fff; font-weight:bold; border:1px solid #333; border-top:none;">▶️ NHẤN VÀO ĐỂ XEM TRỰC TIẾP</div>
+        </a>
+        <div class="post-action"><span>👍 128 Thích</span> <span>💬 45 Bình luận</span></div>
+    </div>
+
+    <div class="post">
+        <div class="post-header">
+            <div class="avatar" style="background:#333; color:#fff;">SK</div>
+            <div class="post-info">
+                <div class="post-user">Sư Kê Miền Tây (Khách gửi)</div>
+                <div class="post-time">2 giờ trước</div>
+            </div>
+        </div>
+        <div class="post-content">
+            Hôm nay lượm nhẹ cái kèo gà Xám bồ CPC4. Cảm ơn AD đã soi kèo chuẩn nhé! Chúc anh em 789VL rực rỡ.
+        </div>
+        <div class="post-action"><span>👍 86 Thích</span> <span>💬 12 Bình luận</span></div>
+    </div>
+
+    <div style="position:fixed;bottom:0;left:0;width:100%;background:#000;border-top:2px solid #bf953f;display:flex;padding:10px;box-sizing:border-box;z-index:9999;gap:10px;">
+        <a href="https://www.789vl.vip/gamelobby/hot_games" style="flex:1;background:var(--gold);color:#000;text-align:center;padding:15px;border-radius:8px;font-weight:900;text-decoration:none;">ĐĂNG KÝ CHƠI NGAY</a>
+        <a href="https://t.me/chamsochuongdan" style="flex:1;background:#222;color:#fff;text-align:center;padding:15px;border-radius:8px;font-weight:900;text-decoration:none;border:1px solid #444;">HỖ TRỢ CSKH</a>
+    </div>
 </div>
 </body>
-</html>
+</html>    
