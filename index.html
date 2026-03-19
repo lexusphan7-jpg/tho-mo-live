@@ -3,83 +3,116 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>789VL - CỘNG ĐỒNG CHIẾN KÊ</title>
+    <title>789VL - CỘNG ĐỒNG CÁ CƯỢC VIỆT NAM</title>
     <style>
         :root { --gold: linear-gradient(90deg, #bf953f, #fcf6ba, #b38728, #fcf6ba, #aa771c); }
-        body { margin:0; background:#000; font-family: sans-serif; color:#eee; }
-        .wrapper { max-width: 500px; margin: auto; padding-bottom: 100px; }
+        body { margin:0; background:#0a0a0a; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color:#eee; line-height:1.6; }
+        .wrapper { max-width: 500px; margin: auto; padding: 10px; padding-bottom: 120px; }
         
-        /* Header kiểu Group Facebook */
-        .header { background: #111; padding: 15px; border-bottom: 1px solid #333; position: sticky; top:0; z-index: 100; display: flex; align-items: center; gap: 10px;}
-        .header img { width: 40px; border-radius: 50%; border: 1px solid #bf953f; }
-        .header-title { font-weight: 900; background: var(--gold); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-size: 20px; }
+        /* Header kiểu Mạng Xã Hội */
+        .header { background: #111; padding: 15px; border-bottom: 2px solid #bf953f; position: sticky; top:0; z-index: 100; box-shadow: 0 4px 10px rgba(0,0,0,0.5); }
+        .header-title { font-weight: 900; background: var(--gold); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-size: 22px; text-transform: uppercase; text-align: center; display: block; }
+        .header-sub { font-size: 11px; color: #888; text-align: center; display: block; margin-top: -3px; }
 
-        /* Ô chát thu nhỏ */
-        .chat-box { background: #111; padding: 10px; margin-bottom: 10px; border-bottom: 5px solid #000; }
-        
-        /* Bài đăng Timeline */
-        .post { background: #111; margin-bottom: 10px; padding: 15px; border-top: 1px solid #333; border-bottom: 1px solid #333; }
-        .post-header { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; }
-        .post-header .avatar { width: 35px; height: 35px; background: var(--gold); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #000; font-weight: bold; font-size: 12px; }
+        /* Ô chát Cbox */
+        .chat-container { border-radius: 12px; overflow: hidden; border: 1.5px solid #bf953f; background: #000; margin-bottom: 20px; box-shadow: 0 4px 15px rgba(191,149,63,0.3); }
+
+        /* Khung Bài Đăng Timeline */
+        .post { background: #111; border: 1px solid #333; border-radius: 15px; padding: 15px; margin-bottom: 20px; box-shadow: 0 8px 15px rgba(0,0,0,0.5); }
+        .post-header { display: flex; align-items: center; gap: 10px; margin-bottom: 12px; }
+        .post-avatar { width: 40px; height: 40px; border-radius: 50%; border: 1.5px solid #bf953f; font-weight: bold; display: flex; align-items: center; justify-content: center; color: #000; font-size: 13px; }
         .post-info { line-height: 1.2; }
-        .post-user { font-weight: bold; color: #bf953f; font-size: 15px; }
+        .post-user { font-weight: bold; color: #bf953f; font-size: 16px; }
         .post-time { font-size: 11px; color: #666; }
-        .post-content { font-size: 15px; margin-bottom: 10px; line-height: 1.4; }
-        .post-img { width: 100%; border-radius: 8px; border: 1px solid #222; }
         
-        /* Nút tương tác giả */
-        .post-action { display: flex; border-top: 1px solid #222; margin-top: 10px; padding-top: 10px; gap: 20px; color: #888; font-size: 13px; }
+        /* Nội dung bài */
+        .post-content { font-size: 15px; margin-bottom: 12px; }
+        .post-content b { color: #fff; }
+        .media-box { border-radius: 10px; overflow: hidden; border: 1px solid #444; margin-bottom: 15px; }
+        .media-box img { width: 100%; display: block; }
+        
+        /* Nút Tương Tác Giả */
+        .post-action { display: flex; border-top: 1px solid #222; margin-top: 12px; padding-top: 10px; gap: 20px; color: #888; font-size: 14px; }
+        .post-action span { cursor: pointer; transition: 0.2s; }
+        .post-action span:hover { color: #bf953f; }
+
+        /* Menu chân trang cố định */
+        .footer-menu { position: fixed; bottom: 0; left: 0; width: 100%; background: #000; border-top: 2px solid #bf953f; display: flex; padding: 12px; box-sizing: border-box; z-index: 1000; gap: 10px; }
+        .btn-foot { flex: 1; text-align: center; padding: 14px; border-radius: 8px; font-weight: 800; text-decoration: none; font-size: 13px; text-transform: uppercase; }
+        .btn-gold { background: var(--gold); color: #000 !important; }
+        .btn-dark { background: #1a1a1a; color: #fff; border: 1px solid #333; }
     </style>
 </head>
 <body>
 
 <div class="header">
-    <img src="https://i.imgur.com/vHqY7bE.png" alt="Logo">
-    <div class="header-title">CỘNG ĐỒNG 789VL</div>
+    <span class="header-title">CỘNG ĐỒNG 789VL</span>
+    <span class="header-sub">Group Tổng Hợp - Kèo Thơm & Chém Gió</span>
 </div>
 
 <div class="wrapper">
-    <div class="chat-box">
-        <div style="border-radius: 10px; overflow: hidden; background: #1a1a1a;">
-            <iframe src="https://www5.cbox.ws/box/?boxid=962030&boxtag=qa1fpa&sec=main" width="100%" height="300" allowtransparency="yes" frameborder="0" scrolling="auto" style="filter: invert(90%) hue-rotate(180deg) brightness(1.2);"></iframe>
-        </div>
+    <div class="chat-container">
+        <iframe src="https://www5.cbox.ws/box/?boxid=962030&boxtag=qa1fpa&sec=main" width="100%" height="320" allowtransparency="yes" frameborder="0" scrolling="auto" style="filter: invert(90%) hue-rotate(180deg) brightness(1.2);"></iframe>
     </div>
-<div class="post">
+    <div class="post">
         <div class="post-header">
-            <div class="avatar">AD</div>
+            <div class="avatar" style="background:var(--gold);">GÀ</div>
             <div class="post-info">
-                <div class="post-user">Quản Trị Viên (789VL)</div>
-                <div class="post-time">Vừa xong • 🌐 Công khai</div>
+                <div class="post-user">Sư Kê Anh Ba (Gà Thomo)</div>
+                <div class="post-time">1 giờ trước</div>
             </div>
         </div>
         <div class="post-content">
-            🔴 <b>THÔNG BÁO LIVE:</b> Bồ CPC1 bắt đầu đá rồi anh em ơi! Link HD không giật lag đã cập nhật. Anh em vào chấm hóng lấy lộc đầu giờ nào!
+            🔴 <b>KÈO CPC1 HÔM NAY:</b> Bắt đầu lúc 12h bồ Thomo. Ưu tiên gà nài xanh trạng 3kg1, lực đá rất tốt. Anh em vào chấm hóng lấy lộc đầu giờ nào! Link live đã cập nhật ở mục trực tiếp.
         </div>
         <a href="https://triokitchenbar.co.uk" style="text-decoration:none;">
-            <img src="https://i.imgur.com/vHqY7bE.png" class="post-img" alt="Ảnh live">
-            <div style="background:#222; padding:10px; border-radius:0 0 8px 8px; color:#fff; font-weight:bold; border:1px solid #333; border-top:none;">▶️ NHẤN VÀO ĐỂ XEM TRỰC TIẾP</div>
+            <img src="https://i.imgur.com/vHqY7bE.png" class="post-img" style="width:100%; border-radius:8px;">
+            <div style="background:#222; padding:10px; border-radius:0 0 8px 8px; color:#fff; font-weight:bold; border:1px solid #333; border-top:none;">▶️ NHẤN VÀO ĐỂ XEM LIVE HD</div>
         </a>
-        <div class="post-action"><span>👍 128 Thích</span> <span>💬 45 Bình luận</span></div>
+        <div class="post-action">
+            <span onclick="window.scrollTo({top: 0, behavior: 'smooth'});">👍 Thích</span> 
+            <span onclick="window.scrollTo({top: 0, behavior: 'smooth'});">💬 Bấm để bình luận</span>
+        </div>
     </div>
 
     <div class="post">
         <div class="post-header">
-            <div class="avatar" style="background:#333; color:#fff;">SK</div>
+            <div class="avatar" style="background:#003cff; color:#fff;">⚽</div>
             <div class="post-info">
-                <div class="post-user">Sư Kê Miền Tây (Khách gửi)</div>
+                <div class="post-user">Chuyên Gia Soi Kèo (Bóng Đá)</div>
                 <div class="post-time">2 giờ trước</div>
             </div>
         </div>
         <div class="post-content">
-            Hôm nay lượm nhẹ cái kèo gà Xám bồ CPC4. Cảm ơn AD đã soi kèo chuẩn nhé! Chúc anh em 789VL rực rỡ.
+            🏆 <b>KÈO C1 ĐÊM NAY:</b> Manchester City vs Real Madrid. Theo chuyên gia phân tích, Real có lợi thế sân nhà nhưng Man City đang sung sức. Lựa chọn Man City chấp 0.5 là cửa sáng nhất. Chúc anh em rực rỡ!
         </div>
-        <div class="post-action"><span>👍 86 Thích</span> <span>💬 12 Bình luận</span></div>
+        <div class="post-action">
+            <span onclick="window.scrollTo({top: 0, behavior: 'smooth'});">👍 Thích</span> 
+            <span onclick="window.scrollTo({top: 0, behavior: 'smooth'});">💬 45 Bình luận</span>
+        </div>
     </div>
 
-    <div style="position:fixed;bottom:0;left:0;width:100%;background:#000;border-top:2px solid #bf953f;display:flex;padding:10px;box-sizing:border-box;z-index:9999;gap:10px;">
-        <a href="https://www.789vl.vip/gamelobby/hot_games" style="flex:1;background:var(--gold);color:#000;text-align:center;padding:15px;border-radius:8px;font-weight:900;text-decoration:none;">ĐĂNG KÝ CHƠI NGAY</a>
-        <a href="https://t.me/chamsochuongdan" style="flex:1;background:#222;color:#fff;text-align:center;padding:15px;border-radius:8px;font-weight:900;text-decoration:none;border:1px solid #444;">HỖ TRỢ CSKH</a>
+    <div class="post">
+        <div class="post-header">
+            <div class="avatar" style="background:#ff4400; color:#fff;">🎲</div>
+            <div class="post-info">
+                <div class="post-user">Cầu Sư Casino (Tài Xỉu)</div>
+                <div class="post-time">4 giờ trước</div>
+            </div>
+        </div>
+        <div class="post-content">
+            🎰 <b>CHIA SẺ CẦU TÀI XỈU:</b> Cầu bệt Tài vừa gãy sang Xỉu. Anh em chú ý, cầu này có xu hướng đi 2 Xỉu 1 Tài. Anh em ưu tiên đi nhẹ cửa Xỉu ở ván tiếp theo. Đánh theo cầu không đánh tất tay nhé!
+        </div>
+        <div class="post-action">
+            <span onclick="window.scrollTo({top: 0, behavior: 'smooth'});">👍 Thích</span> 
+            <span onclick="window.scrollTo({top: 0, behavior: 'smooth'});">💬 Bấm để bình luận</span>
+        </div>
+    </div>
+
+    <div class="footer-menu">
+        <a href="https://www.789vl.vip/gamelobby/hot_games" class="btn-foot btn-gold">ĐĂNG KÝ CHƠI</a>
+        <a href="https://t.me/chamsochuongdan" class="btn-foot btn-dark">HỖ TRỢ CSKH</a>
     </div>
 </div>
 </body>
-</html>    
+</html>
