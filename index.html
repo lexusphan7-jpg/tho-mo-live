@@ -3,93 +3,84 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thạch Anh Ho - Social Network</title>
+    <title>THẠCH ANH HO - ĐẲNG CẤP SOI KÈO</title>
     <style>
-        body { margin: 0; font-family: -apple-system, sans-serif; background: #f0f2f5; overflow: hidden; }
-        .hidden { display: none !important; }
-        /* Màn hình login */
-        #login-page { height: 100vh; display: flex; align-items: center; justify-content: center; background: linear-gradient(135deg, #f0f2f5 0%, #c3cfe2 100%); position: fixed; width: 100%; z-index: 9999; }
-        .login-card { background: white; padding: 40px; border-radius: 15px; box-shadow: 0 15px 35px rgba(0,0,0,0.1); text-align: center; width: 350px; }
-        .btn-login { width: 100%; background: #0866ff; color: white; border: none; padding: 12px; border-radius: 8px; font-weight: bold; cursor: pointer; font-size: 16px; }
-        input { width: 100%; padding: 12px; margin-bottom: 15px; border: 1px solid #ddd; border-radius: 8px; box-sizing: border-box; background: #f5f6f7; }
+        :root { --gold: #ffca28; --red: #e53935; --dark-bg: #0a0a0a; --card-bg: #1a1a1a; }
+        body { margin: 0; font-family: 'Roboto', sans-serif; background: var(--dark-bg); color: #fff; }
+        
+        /* Header Chuyên Nghiệp */
+        .header { background: linear-gradient(180deg, #1e1e1e 0%, #000 100%); padding: 15px; border-bottom: 2px solid var(--gold); position: sticky; top: 0; z-index: 1000; text-align: center; }
+        .logo { color: var(--gold); font-size: 22px; font-weight: 900; text-transform: uppercase; letter-spacing: 2px; text-shadow: 0 0 10px rgba(255, 202, 40, 0.5); }
+        
+        /* Menu Điều Hướng */
+        .nav-bar { display: flex; overflow-x: auto; background: #222; padding: 10px; gap: 15px; border-bottom: 1px solid #333; }
+        .nav-item { white-space: nowrap; font-size: 13px; font-weight: bold; color: #aaa; text-transform: uppercase; cursor: pointer; }
+        .nav-item.active { color: var(--gold); border-bottom: 2px solid var(--gold); }
+
+        /* Khung Đăng Bài (Chỉ Giao Diện) */
+        .post-input-box { background: var(--card-bg); margin: 15px; padding: 15px; border-radius: 12px; border: 1px solid #333; box-shadow: 0 4px 15px rgba(0,0,0,0.5); }
+        .fake-input { background: #333; padding: 12px; border-radius: 8px; color: #888; font-size: 14px; margin-bottom: 10px; border: 1px solid #444; }
+        .action-bar { display: flex; justify-content: space-between; align-items: center; }
+        .btn-post { background: linear-gradient(180deg, #ffd600 0%, #ff9100 100%); color: #000; padding: 10px 25px; border-radius: 5px; font-weight: bold; border: none; font-size: 14px; }
     </style>
 </head>
 <body>
-    <div id="login-page">
-        <div class="login-card">
-            <h1 style="color: #0866ff; margin-bottom: 5px;">Thạch Anh Ho</h1>
-            <p style="color: #65676b; margin-bottom: 25px;">Chào mừng bạn quay trở lại!</p>
-            <input type="text" id="user" placeholder="Tên đăng nhập">
-            <input type="password" id="pass" placeholder="Mật khẩu">
-            <button class="btn-login" onclick="startApp()">ĐĂNG NHẬP</button>
+    <div class="header">
+        <div class="logo">💎 THẠCH ANH HO 💎</div>
+        <div style="font-size: 10px; color: #888;">CỘNG ĐỒNG SOI KÈO - ĐÁ GÀ - XỔ SỐ</div>
+    </div>
+    <div class="nav-bar">
+        <div class="nav-item active">Trang Chủ</div>
+        <div class="nav-item">⚽ Bóng Đá</div>
+        <div class="nav-item">🐓 Đá Gà</div>
+        <div class="nav-item">🎰 Xổ Số</div>
+        <div class="nav-item">🔥 Top Soi Kèo</div>
+    </div>
+    <div class="post-input-box">
+        <div style="display: flex; gap: 10px; margin-bottom: 12px; align-items: center;">
+            <div style="width: 35px; height: 35px; background: var(--gold); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #000; font-weight: bold;">T</div>
+            <div style="font-size: 14px; color: var(--gold);">Chào đại ca, hôm nay vã con gì?</div>
+        </div>
+        <div class="fake-input">Nhập kèo thơm hoặc đính kèm ảnh bill...</div>
+        <div class="action-bar">
+            <div style="color: #4fc3f7; font-size: 13px; cursor: pointer;">📷 Đính kèm ảnh (Bill/Gà)</div>
+            <button class="btn-post">VỤT KÈO</button>
         </div>
     </div>
-    <div id="app-content" class="hidden" style="padding-top: 60px; overflow-y: auto; height: 100vh;">
-        <div style="background: #0866ff; color: white; padding: 15px; position: fixed; top: 0; width: 100%; z-index: 100; font-weight: bold; display: flex; justify-content: space-between;">
-            <span>THẠCH ANH HO</span>
-            <span onclick="location.reload()" style="cursor:pointer">🚪 Thoát</span>
+
+    <div style="padding: 0 15px;">
+        <div style="background: var(--card-bg); padding: 15px; border-radius: 12px; margin-bottom: 15px; border: 1px solid #333;">
+            <div style="display: flex; justify-content: space-between; margin-bottom: 10px;">
+                <span style="color: var(--gold); font-weight: bold;">Lexus Phan <small style="background: #d32f2f; color: #fff; padding: 2px 5px; border-radius: 3px; font-size: 9px;">ADMIN</small></span>
+                <span style="color: #666; font-size: 11px;">10 phút trước</span>
+            </div>
+            <div style="font-size: 15px; line-height: 1.5; color: #ddd;">
+                Kèo tối nay: Arsenal chấp 1 trái. Anh em tin tay nằm trên nhé! Bill 50 củ đã lên. 🚀
+            </div>
+            <div style="margin-top: 10px; background: #222; height: 180px; border-radius: 8px; display: flex; align-items: center; justify-content: center; border: 1px dashed #444; color: #555;">
+                [ HÌNH ẢNH BIÊN LAI THẮNG KÈO ]
+            </div>
+            <div style="margin-top: 12px; border-top: 1px solid #333; padding-top: 10px; display: flex; gap: 20px; color: #888; font-size: 13px;">
+                <span>👍 128 Thích</span> <span>💬 45 Bình luận</span>
+            </div>
         </div>
 
-        <div style="max-width: 600px; margin: 0 auto; padding: 10px;">
-            <div style="background: white; border-radius: 10px; padding: 15px; margin-bottom: 15px; box-shadow: 0 1px 2px rgba(0,0,0,0.1);">
-                <p style="font-weight: bold; margin-top: 0;">Nhóm của bạn</p>
-                <div style="display: flex; gap: 10px; overflow-x: auto; padding-bottom: 5px;">
-                    <div style="min-width: 100px; text-align: center; border: 1px solid #ddd; border-radius: 8px; padding: 10px; background: #fff9e6;">
-                        <span style="font-size: 20px;">💎</span><br><small>Hội Tóc Vàng</small>
-                    </div>
-                    <div style="min-width: 100px; text-align: center; border: 1px solid #ddd; border-radius: 8px; padding: 10px; background: #e6f2ff;">
-                        <span style="font-size: 20px;">🔮</span><br><small>Đá Thô TN</small>
-                    </div>
-                    <div style="min-width: 100px; text-align: center; border: 1px solid #ddd; border-radius: 8px; padding: 10px; background: #f2e6ff;">
-                        <span style="font-size: 20px;">🔥</span><br><small>Phong Thủy</small>
-                    </div>
-                </div>
+        <div style="background: var(--card-bg); padding: 15px; border-radius: 12px; margin-bottom: 15px; border: 1px solid #333;">
+            <div style="display: flex; justify-content: space-between; margin-bottom: 10px;">
+                <span style="color: #4fc3f7; font-weight: bold;">Thần Kèo 88</span>
+                <span style="color: #666; font-size: 11px;">30 phút trước</span>
             </div>
-
-            <div style="background: white; border-radius: 10px; padding: 15px; margin-bottom: 15px;">
-                <div style="display: flex; gap: 10px; align-items: center;">
-                    <div style="width: 40px; height: 40px; background: #ccc; border-radius: 50%;"></div>
-                    <input type="text" id="postInput" placeholder="Hôm nay năng lượng đá thế nào?" style="margin-bottom: 0; border-radius: 20px;">
-                    <button onclick="addPost()" style="background: #0866ff; color: white; border: none; padding: 10px 15px; border-radius: 8px; cursor: pointer;">Đăng</button>
-                </div>
-            </div>
-
-            <div id="news-feed">
-                <div style="background: white; border-radius: 10px; padding: 15px; margin-bottom: 15px;">
-                    <div style="font-weight: bold; color: #0866ff;">Lexus Phan</div>
-                    <p>Mẫu Thạch Anh Tóc Vàng này vừa về, năng lượng cực mạnh! 💎</p>
-                    <div style="height: 150px; background: #eee; border-radius: 8px; display: flex; align-items: center; justify-content: center; color: #999;">[Ảnh Đá Quý]</div>
-                </div>
+            <div style="font-size: 15px; line-height: 1.5; color: #ddd;">
+                Gà xám hôm nay đá quá đỉnh, ăn ngay 3 hồ đầu. Anh em nào theo tôi không? 🐓🔥
             </div>
         </div>
     </div>
-    <script>
-        // Hàm xử lý đăng nhập
-        function startApp() {
-            document.getElementById('login-page').classList.add('hidden');
-            document.getElementById('app-content').classList.remove('hidden');
-            document.body.style.overflow = 'auto'; // Cho phép cuộn khi vào app
-        }
 
-        // Hàm xử lý đăng bài viết mới
-        function addPost() {
-            const content = document.getElementById('postInput').value;
-            if (content.trim() === "") return;
-
-            const feed = document.getElementById('news-feed');
-            const newPost = document.createElement('div');
-            newPost.style = "background: white; border-radius: 10px; padding: 15px; margin-bottom: 15px; animation: fadeIn 0.5s;";
-            newPost.innerHTML = `
-                <div style="font-weight: bold; color: #42b72a;">Thành viên mới</div>
-                <p>${content}</p>
-                <div style="font-size: 12px; color: #65676b;">Vừa xong · 👍 Thích · 💬 Bình luận</div>
-            `;
-            
-            feed.insertBefore(newPost, feed.firstChild);
-            document.getElementById('postInput').value = "";
-        }
-    </script>
-    <style> @keyframes fadeIn { from {opacity: 0; transform: translateY(10px);} to {opacity: 1; transform: translateY(0);} } </style>
-</body>
+    <div style="position: fixed; bottom: 0; width: 100%; max-width: 600px; background: #111; display: flex; justify-content: space-around; padding: 10px 0; border-top: 1px solid var(--gold); z-index: 1000;">
+        <div style="text-align: center; color: var(--gold); font-size: 11px;">🏠<br>Trang chủ</div>
+        <div style="text-align: center; color: #888; font-size: 11px;">⚽<br>Kèo hot</div>
+        <div style="text-align: center; color: #888; font-size: 11px;">🏆<br>BXH</div>
+        <div style="text-align: center; color: #888; font-size: 11px;">👤<br>Của tôi</div>
+    </div>
+    <div style="height: 60px;"></div> </body>
 </html>
-    
